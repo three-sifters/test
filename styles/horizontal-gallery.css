@@ -51,3 +51,16 @@
   width: 1820px;
   margin: auto
 }
+
+#enlarged {
+  position: absolute;
+  width: 512px;
+  margin-left: 687px;
+  opacity: 0;
+
+  transition: .5 all ease;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  -o-transition: .5s all ease;
+  -ms-transition: .5s all ease;
+}

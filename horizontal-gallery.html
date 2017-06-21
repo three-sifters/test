@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="styles/horizontal-gallery.css" type="text/css">
     <script src="scripts/horizontal-gallery.js"></script>
   </head>
-  
+
   <body>
     <div id="gallery">
       <span id="left">
@@ -15,7 +15,7 @@
         <img class="gallery left" width="150" height="150" src="images/horizontal-gallery/4.png">
         <img class="gallery left" width="150" height="150" src="images/horizontal-gallery/5.png">
       </span>
-      <img class="gallery" id="focus" width="225" height="225" src="images/horizontal-gallery/6.png">
+      <img class="gallery" id="focus" onclick="enlarge()" width="225" height="225" src="images/horizontal-gallery/6.png">
       <span id="right">
         <img class="gallery right" width="150" height="150" src="images/horizontal-gallery/7.png">
         <img class="gallery right" width="150" height="150" src="images/horizontal-gallery/8.png">
@@ -24,5 +24,6 @@
         <img class="gallery right" width="150" height="150" src="images/horizontal-gallery/11.png">
       </div>
     </div>
+    <img class="gallery" id="enlarged" onclick="shrink()" width="512" height="512">
   </body>
 </html>
