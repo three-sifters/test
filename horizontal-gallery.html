@@ -8,23 +8,23 @@
 
   <body>
     <div id="gallery">
-      <img class="arrow" id="arrow-left" width="50" height="140" src="images/horizontal-gallery/right-arrow.png">
+      <img class="arrow" id="arrow-left" onclick="rotateGallery(-1)" width="50" height="140" src="images/horizontal-gallery/right-arrow.png">
       <span id="left">
-        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/1.png">
-        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/2.png">
-        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/3.png">
-        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/4.png">
-        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/5.png">
+        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/1.png" imagenumber="1">
+        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/2.png" imagenumber="2">
+        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/3.png" imagenumber="3">
+        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/4.png" imagenumber="4">
+        <img class="gallery left" width="140" height="140" src="images/horizontal-gallery/5.png" imagenumber="5">
       </span>
-      <img class="gallery" id="focus" onclick="enlarge()" width="215" height="215" src="images/horizontal-gallery/6.png">
+      <img class="gallery" id="focus" onclick="enlarge()" width="215" height="215" src="images/horizontal-gallery/6.png" imagenumber="6">
       <span id="right">
-        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/7.png">
-        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/8.png">
-        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/9.png">
-        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/10.png">
-        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/11.png">
+        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/7.png" imagenumber="7">
+        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/8.png" imagenumber="8">
+        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/9.png" imagenumber="9">
+        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/10.png" imagenumber="10">
+        <img class="gallery right" width="140" height="140" src="images/horizontal-gallery/11.png" imagenumber="11">
       </span>
-      <img class="arrow" id="arrow-right" width="50" height="140" src="images/horizontal-gallery/right-arrow.png">
+      <img class="arrow" id="arrow-right" onclick="rotateGallery(1)" width="50" height="140" src="images/horizontal-gallery/right-arrow.png">
     </div>
     <img class="gallery" id="enlarged" onclick="shrink()" width="512" height="512">
   </body>
