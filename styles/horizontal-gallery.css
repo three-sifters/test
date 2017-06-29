@@ -52,6 +52,14 @@
   margin: auto
 }
 
+#gallery #arrow-left {
+  transform: rotate(175deg)
+}
+
+#gallery #arrow-right {
+  transform: rotate(5deg)
+}
+
 #enlarged {
   position: absolute;
   width: 512px;
