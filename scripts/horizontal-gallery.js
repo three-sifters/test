@@ -45,7 +45,7 @@ function rotateGallery(offset) {
             number-=numImages
 
         images[i].setAttribute("imagenumber", number)
-        images[i].src="images/horizontal-gallery/"+number+".png"
+        images[i].src="images/horizontal-gallery/small/"+number+".png"
     }
 
     // Make sure the enlarged image stays in sync with the focus
