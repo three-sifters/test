@@ -1,7 +1,8 @@
 function enlarge() {
     var enlarge=document.getElementById("enlarged")
     enlarge.style.opacity=1
-    enlarge.src=document.getElementById("focus").src
+    var number=document.getElementById("focus").getAttribute("imagenumber")
+    enlarge.src="images/horizontal-gallery/"+number+".png"
 }
 
 function shrink() {
@@ -46,4 +47,9 @@ function rotateGallery(offset) {
         images[i].setAttribute("imagenumber", number)
         images[i].src="images/horizontal-gallery/"+number+".png"
     }
+
+    // Make sure the enlarged image stays in sync with the focus
+    var enlarge=document.getElementById("enlarged")
+    var number=document.getElementById("focus").getAttribute("imagenumber")
+    enlarge.src="images/horizontal-gallery/"+number+".png"
 }
