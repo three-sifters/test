@@ -39,9 +39,9 @@ function rotateGallery(offset) {
     for (var i=0; i<images.length; i++) {
         var number=parseInt(images[i].getAttribute("imagenumber"))+offset
         while (number<1) // Wraparound negative
-            number+=13 // Since number is 0 or negative
-        while (number>13) // Wraparound positive
-            number-=13
+            number+=numImages // Since number is 0 or negative
+        while (number>numImages) // Wraparound positive
+            number-=numImages
 
         images[i].setAttribute("imagenumber", number)
         images[i].src="images/horizontal-gallery/"+number+".png"
