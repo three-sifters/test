@@ -28,11 +28,8 @@ function prepImages() {
 function rotateGallery(offset) {
     if (offset==0) return // Sanity check
 
-    // Does not currently support offsets that are not -1 or 1
-    if (offset<0)
-        offset=-1
-    else
-        offset=1
+    if (offset!=Math.floor(offset))
+        rotateGallery(Math.floor(offset))
 
     // Prepare the images array
     prepImages()
@@ -41,10 +38,10 @@ function rotateGallery(offset) {
 
     for (var i=0; i<images.length; i++) {
         var number=parseInt(images[i].getAttribute("imagenumber"))+offset
-        if (number<1) // Wraparound negative
-            number=13
-        else if (number>13) // Wraparound positive
-            number=1
+        while (number<1) // Wraparound negative
+            number+=13 // Since number is 0 or negative
+        while (number>13) // Wraparound positive
+            number-=13
 
         images[i].setAttribute("imagenumber", number)
         images[i].src="images/horizontal-gallery/"+number+".png"
