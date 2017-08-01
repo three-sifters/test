@@ -1,0 +1,15 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+*.*~
+~$*
+thumbs.db
+secrets/
+*.xcf
+
+# Jekyll files
+_drafts/
+_site/
+_site
+
+.sass-cache
+
+.jekyll-metadata
