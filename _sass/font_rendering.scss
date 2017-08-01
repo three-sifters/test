@@ -1,0 +1,20 @@
+// Font rendering improvements: On header sections and tags on small devices
+header {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Only apply to all elements when in print or on a device at least 600px wide
+@media print {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
