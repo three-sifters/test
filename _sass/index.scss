@@ -35,6 +35,38 @@
   }
 }
 
+.product-container {
+  width: 396px;
+  height: 415px;
+  position:relative;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.product-content {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 31%;
+  color: white;
+  text-align: center;
+  
+  .product-include {
+    white-space: pre-wrap;
+    font-size: 0.75em;
+    text-align: justify;
+    padding: 5px;
+  }
+}
+
 #sonia-content {
   background: linear-gradient(rgba($sonia-theme-color, 0.5), $sonia-theme-color);
 }
@@ -45,6 +77,18 @@
 
 #angela-content {
   background: linear-gradient(rgba($angela-theme-color, 0.5), $angela-theme-color);
+}
+
+#cookie-content {
+  background: linear-gradient(rgba($cookie-theme-color, 0.5), $cookie-theme-color);
+}
+
+#pottery-content {
+  background: linear-gradient(rgba($pottery-theme-color, 0.5), $pottery-theme-color);
+}
+
+#art-content {
+  background: linear-gradient(rgba($art-theme-color, 0.5), $art-theme-color);
 }
 
 #sifters-container {
