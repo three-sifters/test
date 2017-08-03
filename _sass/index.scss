@@ -50,6 +50,7 @@
 }
 
 .product-content {
+  display: table;
   position: absolute;
   top: 70%;
   left: 0;
@@ -60,10 +61,15 @@
   text-align: center;
   
   .product-include {
+    display: table-cell;
     white-space: pre-wrap;
-    font-size: 0.75em;
-    text-align: justify;
+    font-size: 1em;
+    text-align: center;
     padding: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-decoration: underline;
+    vertical-align: middle;
   }
 }
 
