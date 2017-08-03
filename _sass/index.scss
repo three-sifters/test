@@ -1,6 +1,6 @@
 .sifter-container {
-  width: 400px;
-  height: 600px;
+  width: 396px;
+  height: 594px;
   position:relative;
 }
 
@@ -45,4 +45,10 @@
 
 #angela-content {
   background: linear-gradient(rgba($angela-theme-color, 0.5), $angela-theme-color);
+}
+
+#sifters-container {
+  border: 3px outset black;
+  padding: 3px;
+  height: 600px;
 }
