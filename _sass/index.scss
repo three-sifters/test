@@ -48,7 +48,7 @@
 }
 
 #sifters-container {
-  border: 3px outset black;
+  border: 3px outset $outset-border-color;
   padding: 3px;
   height: 600px;
 }
