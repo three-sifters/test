@@ -35,5 +35,8 @@ function fillMetadata() {
     if (cents.length<2)
         cents="0"+cents;
     document.getElementById("gallery-cents").innerHTML=cents;
+
+    input.disabled=!currentImage.inStock;
+    document.getElementById("gallery-order").disabled=input.disabled;
 }
 document.addEventListener("DOMContentLoaded", fillMetadata);
