@@ -5,17 +5,30 @@ var galleryIndex=1;
 function fillMetadata() {
     var currentImage=gallery.images[galleryIndex];
     var container=document.getElementById("gallery-info-container");
-    
+
     container.getElementById("gallery-title").innerHTML=currentImage.name;
     container.getElementById("gallery-description").innerHTML=currentImage.description;
+    if (currentImage.inStock==undefined)
+        currentImage.inStock=true;
     container.getElementById("out-of-stock").style.display=currentImage.inStock ? "none" : "block";
-    
+
     var input=container.getElementById("gallery-units");
+    if (currentImage.minCount==undefined)
+        currentImage.minCount=1;
     input.min=currentImage.minCount;
+    if (currentImage.defaultCount==undefined)
+        currentImage.defaultCount=1;
     input.value=currentImage.defaultCount;
-    input.max=currentImage.maxCount;
+    if (currentImage.maxCount==undefined)
+        input.removeAttribute("max");
+    else
+        input.max=currentImage.maxCount;
+    if (currentImage.stepCount==undefined)
+        currentImage.stepCount=1;
     input.step=currentImage.stepCount;
-    
+
+    if (currentImage.price==undefined)
+        currentImage.price=100;
     var price=currentImage.price;
     container.getElementById("gallery-dollars").innerHTML=Math.floor(price/100);
     price=price%100;
