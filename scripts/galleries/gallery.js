@@ -5,6 +5,8 @@ var galleryIndex=4;
 var images=0;
 var pathPrefix="";
 
+var cartKey="shoppingCart"; // Constant, keep the same wherever the cart is referenced
+
 function collectionToArray(collection) {
     // Helper function: Convert an HTMLCollection to a JS array.
     // Why there isn't an easier way to do this, I have no idea.
@@ -118,4 +120,22 @@ function rotateGallery(offset) {
     // Update image description data
     galleryIndex=document.getElementById("focus").getAttribute("imagenumber");
     fillMetadata();
+}
+
+function order() {
+    var storage=sessionStorage;
+    var cart=JSON.parse(storage.getItem(cartKey));
+    var item={
+        "product" : {
+            "name"  : gallery.images[galleryIndex].name,
+            "price" : gallery.images[galleryIndex].price,
+            "image" : document.getElementById("focus").src
+        },
+        "count"   : document.getElementById("gallery-units").value
+    };
+    if (cart==null)
+        cart=[item];
+    else
+        cart.push(item);
+    storage.setItem(cartKey, JSON.stringify(cart));
 }
