@@ -1,11 +1,22 @@
-$primary-theme-color: #F37736;
+// This file holds definitions of named colors used in other style files
+// This section can be easily edited: The comments after the semicolons describe where the color is used...
+// And the colors themselves (#XXXXXX) can be chosen on a site like https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
+// Copy the hex designation of the color to replace the old definition, and it will propagate through the style files immediately
 
-$sonia-theme-color: #0000FF;
-$claudia-theme-color: #00AA00;
-$angela-theme-color: #FF0000;
+// Large element colors
+$primary-theme-color: #000000; // Used eg for the background of the body of pages, for contrast (with added transparency)
 
-$cookie-theme-color: #0000FF;
-$pottery-theme-color: #00AA00;
-$art-theme-color: #FF0000;
+// Sifter's colors: Used when signifying a particular sifter
+// Used eg as the background for the sifter overlays on the index page
+$sonia-theme-color: #0000FF; // Sonia Hodin
+$claudia-theme-color: #00AA00; // Claudia Toca
+$angela-theme-color: #FF0000; // Angela Scharff
 
-$outset-border-color: #656565;
+// Product colors: Used to signify particular products
+// Used eg as the background for the product overlays on the index page
+$cookie-theme-color: #0000FF; // Baked goods
+$pottery-theme-color: #00AA00; // Ceramic goods
+$art-theme-color: #FF0000; // Painted goods
+
+// Accent colors: These have no notable semantic uses, but are named to ensure sitewide consistency
+$outset-border-color: #656565; // The color on borders of elements that "pop out" of the site

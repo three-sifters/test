@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster');
+// This file manages the theme of the default layout exclusively.
 
 body,html {
   height: 100%;
@@ -8,8 +8,4 @@ body,html {
   max-width: 1200px;
   height: 100%;
   margin: auto;
-}
-
-#title {
-  font-family: 'Lobster', cursive;
 }

@@ -1,6 +1,10 @@
 ---
 ---
+
+// This file simply imports other files, to assemble the necessary stylesheet for all default layout pages.
+
 @import "named_colors.scss";
+@import "header.scss";
 @import "layout_default_base.scss";
 @import "index.scss";
 @import "font_rendering.scss"
