@@ -3,3 +3,24 @@
 body,html {
   height: 100%;
 }
+
+#container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+
+#gallery-title {
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+#gallery-units {
+  width: 7ch;
+}
+
+#out-of-stock {
+  color: red;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
