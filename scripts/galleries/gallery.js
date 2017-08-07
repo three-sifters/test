@@ -36,4 +36,4 @@ function fillMetadata() {
         cents="0"+cents;
     document.getElementById("gallery-cents").innerHTML=cents;
 }
-fillMetadata()
+document.addEventListener("DOMContentLoaded", fillMetadata);
