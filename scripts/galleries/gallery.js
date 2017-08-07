@@ -4,15 +4,14 @@ var galleryIndex=1;
 
 function fillMetadata() {
     var currentImage=gallery.images[galleryIndex];
-    var container=document.getElementById("gallery-info-container");
 
-    container.getElementById("gallery-title").innerHTML=currentImage.name;
-    container.getElementById("gallery-description").innerHTML=currentImage.description;
+    document.getElementById("gallery-title").innerHTML=currentImage.name;
+    document.getElementById("gallery-description").innerHTML=currentImage.description;
     if (currentImage.inStock==undefined)
         currentImage.inStock=true;
-    container.getElementById("out-of-stock").style.display=currentImage.inStock ? "none" : "block";
+    document.getElementById("out-of-stock").style.display=currentImage.inStock ? "none" : "block";
 
-    var input=container.getElementById("gallery-units");
+    var input=document.getElementById("gallery-units");
     if (currentImage.minCount==undefined)
         currentImage.minCount=1;
     input.min=currentImage.minCount;
@@ -30,11 +29,11 @@ function fillMetadata() {
     if (currentImage.price==undefined)
         currentImage.price=100;
     var price=currentImage.price;
-    container.getElementById("gallery-dollars").innerHTML=Math.floor(price/100);
+    document.getElementById("gallery-dollars").innerHTML=Math.floor(price/100);
     price=price%100;
     var cents=price.toString();
     if (cents.length<2)
         cents="0"+cents;
-    container.getElementById("gallery-cents").innerHTML=cents;
+    document.getElementById("gallery-cents").innerHTML=cents;
 }
 fillMetadata()
