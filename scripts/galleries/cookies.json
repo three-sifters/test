@@ -1,0 +1,99 @@
+// Configuration file for the cookies gallery
+
+var gallery = {
+    "length" : 10,
+    "images" : {
+        1 : {
+            "title"         : "Turkey Cookie",
+            "alt"           : "A Turkey Cookie",
+            "name"          : "Colorful Turkey Cookie",
+            "description"   : "This colorful turkey cookie is a turkey cookie which is colorful",
+            "price"         : 550,
+            "defaultCount"  : 9,
+            "maxCount"      : 21,
+            "minCount"      : 6,
+            "stepCount"     : 3,
+            "inStock"       : true
+        },
+        2 : {
+            "name"          : "Squirrel Cookie",
+            "description"   : "A squirrel with acorns makes a delicious pairing for eating chipmunks",
+            "price"         : 50,
+        },
+        3 : {
+            "title"         : "Rabbit mother and child",
+            "alt"           : "A rabbit mother and child, on an oval cookie",
+            "name"          : "Rabbit mother and child sugarcookie",
+            "description"   : "An oval sugarcookie, with a rabbit mother and child embossed on its surface",
+            "price"         : 750,
+            "defaultCount"  : 5,
+            "maxCount"      : 15,
+            "inStock"       : true
+        },
+        4 : {
+            "name"          : "Umbrella Cookie",
+            "description"   : "Need some cheering up on a rainy day?<p>This umbrella cookie will suit your needs perfectly.",
+            "price"         : 99999999,
+            "inStock"       : false
+        },
+        5 : {
+            "name"          : "Child Love",
+            "description"   : "Did you just miss your wife giving birth while browsing our cookies?<p>Please accept our sincerest apologies, and may we recommend some of these delicious heart shaped cookies to help her not commit mariticide?",
+            "price"         : 100,
+            "defaultCount"  : 12,
+            "maxCount"      : 24,
+            "inStock"       : true
+        },
+        6 : {
+            "title"         : "For Jack",
+            "name"          : "Jack's Butterfly",
+            "description"   : "A butterfly slips into your mouth, so gracefully you'd think its buttering you up",
+            "price"         : 25,
+            "defaultCount"  : 4,
+            "maxCount"      : 40,
+            "stepCount"     : 4,
+            "inStock"       : true
+        },
+        7 : {
+            "title"         : "Cabin on a lake you've never heard of",
+            "name"          : "Cabin on Keuka Lake",
+            "description"   : "Ever wanted to visit a cabin on a lake in the summer?<p>Maybe you don't have that kind of money, but you can (probably) afford this cookie!",
+            "price"         : 1,
+            "defaultCount"  : 144,
+            "maxCount"      : 1200,
+            "minCount"      : 12,
+            "stepCount"     : 12,
+            "inStock"       : true
+        },
+        8 : {
+            "name"          : "Random body of water",
+            "description"   : "Where's this water?<br>Who knows!<p>What is it?<br>Delicious!",
+            "price"         : 550,
+            "defaultCount"  : 9,
+            "maxCount"      : 21,
+            "minCount"      : 6,
+            "stepCount"     : 3,
+            "inStock"       : false
+        },
+        9 : {
+            "name"          : "Flowers",
+            "description"   : "I'm getting bored of writing descriptions, just buy the cookies",
+            "price"         : 1,
+            "defaultCount"  : 9,
+            "maxCount"      : 21,
+            "inStock"       : true
+        },
+        10 : {
+            "title"         : "Turkey Cookie",
+            "alt"           : "A Turkey Cookie",
+            "name"          : "Colorless Turkey Cookie",
+            "description"   : "This colorless turkey cookie is a turkey cookie which is less colorful, and therefore is on discount.",
+            "price"         : 549,
+            "defaultCount"  : 22,
+            "maxCount"      : 211,
+            "minCount"      : 22,
+            "stepCount"     : 3,
+            "inStock"       : true
+        },
+    }
+}

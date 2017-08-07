@@ -5,9 +5,14 @@
 
   <!-- Theme page for this layout in particular -->
   <link rel="stylesheet" href="{{ site.baseurl }}/styles/layout_gallery.css" type="text/css">
+  <!-- JSON configuration for the gallery being displayed -->
+  <script src="{{ site.baseurl }}/scripts/galleries/{{ page.gallery }}.json" type="text/javascript"></script>
 </head>
 
 <body>
+  <input type="hidden" id="gallery-name" value="{{ page.gallery }}">
+  <input type="hidden" id="gallery-path" value="{{ site.baseurl }}/images/galleries/{{ page.gallery }}/">
+
   <div id="container">
     <header>
       {% include header.html %}
@@ -15,6 +20,10 @@
 
     <main>
       {{ content }}
+      
+      <div id="gallery-include">
+        {% include galleries/{{ page.gallery }}.html %}
+      </div>
     </main>
   </div>
 </body>
