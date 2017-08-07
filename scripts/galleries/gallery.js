@@ -22,6 +22,27 @@ function prepImages() {
     pathPrefix=document.getElementById("gallery-path").value;
 }
 
+// Performs pricing updates
+function updatePrice(price) {
+    var input=document.getElementById("gallery-units");
+    if (price==undefined)
+        price=gallery.images[galleryIndex].price;
+
+    document.getElementById("gallery-dollars").innerHTML=Math.floor(price/100);
+    var cents=price%100;
+    cents=cents.toString();
+    if (cents.length<2)
+        cents="0"+cents;
+    document.getElementById("gallery-cents").innerHTML=cents;
+    price*=input.value;
+    document.getElementById("total-dollars").innerHTML=Math.floor(price/100);
+    cents=price%100;
+    cents=cents.toString();
+    if (cents.length<2)
+        cents="0"+cents;
+    document.getElementById("total-cents").innerHTML=cents;
+}
+
 // Fills in data on the current image
 function fillMetadata() {
     var currentImage=gallery.images[galleryIndex];
@@ -52,13 +73,7 @@ function fillMetadata() {
     // Price
     if (currentImage.price==undefined)
         currentImage.price=100;
-    var price=currentImage.price;
-    document.getElementById("gallery-dollars").innerHTML=Math.floor(price/100);
-    price=price%100;
-    var cents=price.toString();
-    if (cents.length<2)
-        cents="0"+cents;
-    document.getElementById("gallery-cents").innerHTML=cents;
+    updatePrice(currentImage.price);
 
     // Enable/disable inputs and add to cart depending on stock
     input.disabled=!currentImage.inStock;
