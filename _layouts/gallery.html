@@ -6,6 +6,7 @@
   <!-- Theme page for this layout in particular -->
   <link rel="stylesheet" href="{{ site.baseurl }}/styles/layout_gallery.css" type="text/css">
   <!-- JSON configuration for the gallery being displayed -->
+  <!-- Okay, you got me, its not truly JSON, but it is a config file. Sue me. -->
   <script src="{{ site.baseurl }}/scripts/galleries/{{ page.gallery }}.json" type="text/javascript"></script>
 </head>
 
@@ -20,9 +21,21 @@
 
     <main>
       {{ content }}
-      
+
       <div id="gallery-include">
         {% include galleries/{{ page.gallery }}.html %}
+      </div>
+
+      <div id="gallery-info-container">
+        <h2 id="gallery-title">Das Ist Eine Title</h2>
+
+        <div id="gallery-description">Ceci n'est pas une pipe</div>
+
+        <input type="range" id="gallery-units" min="1" step="1" value="1">x$
+        <span id="gallery-dollars">0</span>.<span id="gallery-cents">00</span>
+        <button id="gallery-order">Add to Cart</button>
+
+        <div id="out-of-stock" style="display: none">Out of Stock</div>
       </div>
     </main>
   </div>
