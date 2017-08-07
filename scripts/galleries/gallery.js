@@ -2,6 +2,7 @@
 
 var galleryIndex=1;
 
+// Fills in data on the current image
 function fillMetadata() {
     var currentImage=gallery.images[galleryIndex];
 
@@ -82,4 +83,8 @@ function rotateGallery(offset) {
         images[i].setAttribute("imagenumber", number);
         images[i].src=pathPrefix+number+".jpg";
     }
+
+    // Update image description data
+    galleryIndex=document.getElementById("focus").getAttribute("imagenumber");
+    fillMetadata();
 }
