@@ -40,3 +40,46 @@ function fillMetadata() {
     document.getElementById("gallery-order").disabled=input.disabled;
 }
 document.addEventListener("DOMContentLoaded", fillMetadata);
+
+var images=0;
+var pathPrefix="";
+
+function collectionToArray(collection) {
+    // Helper function: Convert an HTMLCollection to a JS array.
+    // Why there isn't an easier way to do this, I have no idea.
+    return Array.prototype.slice.call(collection);
+}
+
+function prepImages() {
+    // Only initialize if not already initialized
+    if (images!==0) return;
+
+    images=collectionToArray(document.getElementById("left").children);
+    images.push(document.getElementById("focus"));
+    images=images.concat(collectionToArray(document.getElementById("right").children));
+
+    pathPrefix=document.getElementById("gallery-path").value;
+}
+
+function rotateGallery(offset) {
+    if (offset==0) return; // Sanity check
+
+    if (offset!=Math.floor(offset))
+        rotateGallery(Math.floor(offset));
+
+    // Prepare the images array
+    prepImages();
+
+    numImages=gallery.length; // Shorthand
+
+    for (var i=0; i<images.length; i++) {
+        var number=parseInt(images[i].getAttribute("imagenumber"))+offset;
+        while (number<1) // Wraparound negative
+            number+=numImages; // Since number is 0 or negative
+        while (number>numImages) // Wraparound positive
+            number-=numImages;
+
+        images[i].setAttribute("imagenumber", number);
+        images[i].src=pathPrefix+number+".jpg";
+    }
+}
