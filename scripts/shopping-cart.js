@@ -5,6 +5,7 @@ var cartKey="shoppingCart"; // Constant, keep the same wherever the cart is refe
 
 // Calculates total prices for the cart
 function recalculateCart() {
+    var storage=sessionStorage;
     var table=document.getElementById("cart-table-body");
     var cart=JSON.parse(storage.getItem(cartKey));
     for (var i=0; i<table.children.length; ++i) {
