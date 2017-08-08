@@ -122,3 +122,11 @@ function saveCart() {
     dirty=false;
     document.getElementById("save-cart").disabled=true;
 }
+
+// Pretends that this is a real shopping cart from which one can order items
+function orderCart() {
+    alert(
+        "Thank you for pressing the Order Cart button!\n"+
+        "Since this is just a demonstration, you cannot actually submit orders here.\n"+
+        "But rest assured, the button works.");
+}
