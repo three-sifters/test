@@ -64,8 +64,10 @@ function fillMetadata() {
     if (currentImage.defaultCount==undefined)
         currentImage.defaultCount=1;
     input.value=currentImage.defaultCount;
-    if (currentImage.maxCount==undefined)
+    if (currentImage.maxCount==undefined || currentImage.maxCount<1) {
         input.removeAttribute("max");
+        currentImage.maxCount=-1;
+    }
     else
         input.max=currentImage.maxCount;
     if (currentImage.stepCount==undefined)
