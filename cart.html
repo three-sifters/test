@@ -1,0 +1,55 @@
+---
+layout: default
+title: The Three Sifters - Shopping Cart
+---
+
+<h3>Shopping Cart</h3>
+<table id="cart-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Count</th>
+      <th></th>
+      <th>Total Price</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody id="cart-table-body">
+    <tr id="deleteMe"><!-- This element is only kept to keep the tbody around --></tr>
+  </tbody>
+</table>
+
+<h4 id="cart-empty" style="display:none">Shopping Cart Empty</h4>
+
+<table style="display:none">
+<!-- The contents of the following element are used by the script to spawn new table rows. Modify it to modify all table rows as they are added. -->
+<tbody id="cart-table-template-row-container">
+  <tr class="cart-table-row">
+    <td class="cart-table-image">
+      <img width="100" height="100" class="cart-item-image" src="{{ site.baseurl }}
+/icons/large.png">
+    </td>
+    <td class="cart-table-name">
+      <p class="cart-item-name">Sifter</p>
+    </td>
+    <td class="cart-table-price">
+      $<span class="cart-item-dollars">0</span>.<span 
+class="cart-item-cents">00</span>
+    </td>
+    <td class="cart-table-count">
+      <input type="number" class="cart-item-count" min="1" step="1" value="1" 
+name="cart-item-count" onchange="recalculateCart()">
+    <td class="cart-table-separator"></td>
+    <td class="cart-table-price-total">
+      $<span class="cart-item-dollars">0</span>.<span 
+class="cart-item-cents">00</span>
+    </td>
+    <td class="cart-table-remove">
+      <button id="cart-item-remove" onclick="removeRow(this)">X</button>
+    </td>
+  </tr>
+</tbody>
+</table>
