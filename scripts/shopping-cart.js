@@ -17,7 +17,8 @@ function structureCart() {
     var clone;
     var templateContainer=document.getElementById("cart-table-template-row-container")
     var table=document.getElementById("cart-table-body");
-    table.removeChild(table.firstElementChild);
+    while (table.firstChild) // Make sure we don't double-make the table
+        table.removeChild(table.firstChild);
     for (var i=0; i<cart.length; ++i) {
         console.log(i);
         for (var n=0; n<templateContainer.children.length; ++n) {
