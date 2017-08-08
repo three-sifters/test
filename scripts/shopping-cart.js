@@ -30,7 +30,7 @@ function structureCart() {
         row.getElementsByClassName("cart-item-image")[0].src=cart[i].product.image;
         row.getElementsByClassName("cart-item-name")[0].innerHTML=cart[i].product.name;
 
-        var price=cart[i].product.cost;
+        var price=cart[i].product.price;
         row.getElementsByClassName("cart-item-dollars")[0].innerHTML=Math.floor(price/100);
         var cents=price%100;
         cents=cents.toString();
