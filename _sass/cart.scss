@@ -1,0 +1,11 @@
+// This file handles style for the shopping cart
+
+#cart-table {
+  td,th {
+    border-left: 15px solid rgba(255, 255, 255, 0);
+  }
+
+  tr>td:first-child, tr>th:first-child {
+    border-left: initial;
+  }
+}
