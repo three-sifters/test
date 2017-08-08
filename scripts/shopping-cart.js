@@ -72,3 +72,8 @@ function structureCart() {
     recalculateCart(null);
 }
 document.addEventListener("DOMContentLoaded", structureCart);
+
+// Removes the row which contains the remove button that was pressed
+function removeRow(source) {
+    document.getElementById("cart-table-body").removeChild(source.parentNode.parentNode);
+}
