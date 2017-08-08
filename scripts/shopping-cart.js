@@ -11,10 +11,12 @@ function recalculateCart(tracer) {
     var storage=sessionStorage;
     var table=document.getElementById("cart-table-body");
     var cart=JSON.parse(storage.getItem(cartKey));
+    var totalCents=0;
     for (var i=0; i<table.children.length; ++i) {
         var totalCost=cart[i].product.price;
         var row=table.children[i];
         totalCost*=row.getElementsByClassName("cart-item-count")[0].value;
+        totalCents+=totalCost;
         row.getElementsByClassName("cart-item-dollars")[1].innerHTML=Math.floor(totalCost/100);
         var cents=totalCost%100;
         cents=cents.toString();
@@ -22,6 +24,13 @@ function recalculateCart(tracer) {
             cents="0"+cents;
         row.getElementsByClassName("cart-item-cents")[1].innerHTML=cents;
     }
+    
+    document.getElementById("total-dollars").innerHTML=Math.floor(totalCents/100);
+    totalCents=totalCents%100;
+    totalCents=totalCents.toString();
+    if (cents.length<2)
+        cents="0"+cents;
+    document.getElementById("total-cents").innerHTML=totalCents;
 
     document.getElementById("save-cart").disabled=!dirty;
 }
@@ -34,6 +43,7 @@ function structureCart() {
         document.getElementById("order-cart").disabled=true;
         document.getElementById("cart-table").style.display="none";
         document.getElementById("cart-empty").style.display="block";
+        document.getElementById("total-price").style.display="none";
         return;
     }
 
