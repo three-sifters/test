@@ -79,3 +79,35 @@ function removeRow(source) {
     dirty=true
     document.getElementById("save-cart").disabled=false;
 }
+
+// Sets the shopping cart in memory to match the one on the pageX
+function saveCart() {
+    var cart=[];
+    var table=document.getElementById("cart-table-body");
+    var item;
+    for (int i=0; i<table.children.length; ++i) {
+        var row=table.children[i];
+        item.product.name=row.getElementsByClassName("cart-item-name")[0].innerHTML;
+        item.product.image=row.getElementsByClassName("cart-item-image")[0].src;
+
+        var input=row.getElementsByClassName("cart-item-count")[0];
+        if (input.max)
+            item.product.max=input.max;
+        else
+            item.product.max=-1;
+        item.product.min=input.min;
+        item.product.step=input.step;
+        item.count=input.value;
+
+        var price=parseInt(row.getElementsByClassName("cart-item-dollars")[0].innerHTML);
+        price*=100;
+        price+=parseInt(row.getElementsByClassName("cart-item-cents")[0].innerHTML);
+        item.product.price=price;
+        cart.push(item);
+    }
+    var storage=sessionStorage;
+    storage.setItem(cartKey, JSON.stringify(cart));
+
+    dirty=false;
+    document.getElementById("save-cart").disabled=true;
+}
