@@ -62,5 +62,7 @@ function structureCart() {
         input.step=cart[i].product.step;
         input.value=cart[i].count;
     }
+
+    recalculateCart();
 }
 document.addEventListener("DOMContentLoaded", structureCart);
