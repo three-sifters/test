@@ -32,6 +32,13 @@ body,html {
   text-transform: uppercase;
 }
 
+#to-cart {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
 // Gallery proper styling
 .gallery.left {
   transform: rotate(-5deg)
