@@ -100,8 +100,10 @@ document.addEventListener("DOMContentLoaded", fillMetadata);
 function rotateGallery(offset) {
     if (offset==0) return; // Sanity check
 
-    if (offset!=Math.floor(offset))
+    if (offset!=Math.floor(offset)) {
         rotateGallery(Math.floor(offset));
+        return;
+    }
 
     // Prepare the images array
     prepImages();
