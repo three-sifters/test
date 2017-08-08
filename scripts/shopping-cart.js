@@ -11,13 +11,13 @@ function recalculateCart() {
     for (var i=0; i<table.children.length; ++i) {
         var totalCost=cart[i].product.price;
         var row=table.children[i];
-        totalCost*=row.getElementsByClassName("cart-item-count").value;
-        row.getElementsByClassName("cart-item-dollars")[0].innerHTML=Math.floor(totalCost/100);
+        totalCost*=row.getElementsByClassName("cart-item-count")[0].value;
+        row.getElementsByClassName("cart-item-dollars")[1].innerHTML=Math.floor(totalCost/100);
         var cents=totalCost%100;
         cents=cents.toString();
         if (cents.length<2)
             cents="0"+cents;
-        row.getElementsByClassName("cart-item-cents")[0].innerHTML=cents;
+        row.getElementsByClassName("cart-item-cents")[1].innerHTML=cents;
     }
 }
 
