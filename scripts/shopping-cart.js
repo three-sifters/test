@@ -87,7 +87,10 @@ function saveCart() {
 
     var cart=[];
     var table=document.getElementById("cart-table-body");
-    var item;
+    var item={
+        product : {},
+        count   : 0
+    };
     for (var i=0; i<table.children.length; ++i) {
         var row=table.children[i];
         item.product.name=row.getElementsByClassName("cart-item-name")[0].innerHTML;
@@ -107,6 +110,11 @@ function saveCart() {
         price+=parseInt(row.getElementsByClassName("cart-item-cents")[0].innerHTML);
         item.product.price=price;
         cart.push(item);
+
+        item={
+            product : {},
+            count   : 0
+        };
     }
     var storage=sessionStorage;
     storage.setItem(cartKey, JSON.stringify(cart));
