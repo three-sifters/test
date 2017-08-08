@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", structureCart);
 
 // Removes the row which contains the remove button that was pressed
 function removeRow(source) {
-    if (!confirm("Please confirm that you would like to remove this item from
-your cart"))
+    if (!confirm("Please confirm that you would like to remove this item from "+
+"your cart"))
         return;
 
     document.getElementById("cart-table-body").removeChild(source.parentNode.parentNode);
