@@ -3,6 +3,23 @@
 var dirty=false; // Whether the cart needs saving
 var cartKey="shoppingCart"; // Constant, keep the same wherever the cart is referenced
 
+// Calculates total prices for the cart
+function recalculateCart() {
+    var table=document.getElementById("cart-table-body");
+    var cart=JSON.parse(storage.getItem(cartKey));
+    for (var i=0; i<table.children.length; ++i) {
+        var totalCost=cart[i].product.price;
+        var row=table.children[i];
+        totalCost*=row.getElementsByClassName("cart-item-count").value;
+        row.getElementsByClassName("cart-item-dollars")[0].innerHTML=Math.floor(totalCost/100);
+        var cents=totalCost%100;
+        cents=cents.toString();
+        if (cents.length<2)
+            cents="0"+cents;
+        row.getElementsByClassName("cart-item-cents")[0].innerHTML=cents;
+    }
+}
+
 // Loads the shopping cart and fills in the appropriate items in the
 function structureCart() {
     var storage=sessionStorage;
