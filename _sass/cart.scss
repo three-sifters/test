@@ -9,8 +9,12 @@
   tr>td:first-child, tr>th:first-child {
     border-left: initial;
   }
-  
+
   .cart-item-name {
     margin-bottom: initial;
+  }
+
+  .cart-item-count {
+    width: 6ch;
   }
 }
