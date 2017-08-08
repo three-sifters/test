@@ -43,7 +43,6 @@ function structureCart() {
     while (table.firstChild) // Make sure we don't double-make the table
         table.removeChild(table.firstChild);
     for (var i=0; i<cart.length; ++i) {
-        console.log(i);
         for (var n=0; n<templateContainer.children.length; ++n) {
             clone=templateContainer.children[n].cloneNode(true);
             table.appendChild(clone);
