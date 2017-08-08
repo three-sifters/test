@@ -31,7 +31,7 @@ function structureCart() {
         row.getElementsByClassName("cart-item-name")[0].innerHTML=cart[i].product.name;
 
         var price=cart[i].product.cost;
-        row.getElementsByClassName("cart-item-collars")[0].innerHTML=Math.floor(price/100);
+        row.getElementsByClassName("cart-item-dollars")[0].innerHTML=Math.floor(price/100);
         var cents=price%100;
         cents=cents.toString();
         if (cents.length<2)
