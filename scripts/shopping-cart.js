@@ -23,7 +23,7 @@ function recalculateCart(tracer) {
         row.getElementsByClassName("cart-item-cents")[1].innerHTML=cents;
     }
 
-    document.getElementById("order-cart").disabled=!dirty;
+    document.getElementById("save-cart").disabled=!dirty;
 }
 
 // Loads the shopping cart and fills in the appropriate items in the
@@ -76,4 +76,6 @@ document.addEventListener("DOMContentLoaded", structureCart);
 // Removes the row which contains the remove button that was pressed
 function removeRow(source) {
     document.getElementById("cart-table-body").removeChild(source.parentNode.parentNode);
+    dirty=true
+    document.getElementById("save-cart").disabled=false;
 }
