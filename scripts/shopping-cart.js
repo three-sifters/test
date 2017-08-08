@@ -88,7 +88,7 @@ function saveCart() {
     var cart=[];
     var table=document.getElementById("cart-table-body");
     var item;
-    for (int i=0; i<table.children.length; ++i) {
+    for (var i=0; i<table.children.length; ++i) {
         var row=table.children[i];
         item.product.name=row.getElementsByClassName("cart-item-name")[0].innerHTML;
         item.product.image=row.getElementsByClassName("cart-item-image")[0].src;
