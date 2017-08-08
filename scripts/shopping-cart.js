@@ -82,6 +82,9 @@ function removeRow(source) {
 
 // Sets the shopping cart in memory to match the one on the pageX
 function saveCart() {
+    if (!dirty) // Don't bother
+        return;
+
     var cart=[];
     var table=document.getElementById("cart-table-body");
     var item;
