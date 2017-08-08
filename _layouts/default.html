@@ -5,10 +5,11 @@
 
   <!-- Theme page for this layout in particular -->
   <link rel="stylesheet" href="{{ site.baseurl }}/styles/layout_default.css" type="text/css">
-  
+
   {% if page.script %}
     <!-- Page-specific script -->
-    <script src="{{ page.script }}" type="text/javascript"></script>
+    <script src="{{ site.baseurl }}/scripts/{{ page.script }}"
+type="text/javascript"></script>
   {% endif %}
 </head>
 
