@@ -143,4 +143,6 @@ function order() {
     else
         cart.push(item);
     storage.setItem(cartKey, JSON.stringify(cart));
+
+    alert("Ordered "+item.count+" of the "+item.product.name);
 }
