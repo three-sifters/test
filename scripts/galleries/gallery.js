@@ -129,7 +129,10 @@ function order() {
         "product" : {
             "name"  : gallery.images[galleryIndex].name,
             "price" : gallery.images[galleryIndex].price,
-            "image" : document.getElementById("focus").src
+            "image" : document.getElementById("focus").src,
+            "max"   : gallery.images[galleryIndex].maxCount,
+            "min"   : gallery.images[galleryIndex].minCount,
+            "step"  : gallery.images[galleryIndex].stepCount
         },
         "count"   : document.getElementById("gallery-units").value
     };
