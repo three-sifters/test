@@ -4,7 +4,10 @@ var dirty=false; // Whether the cart needs saving
 var cartKey="shoppingCart"; // Constant, keep the same wherever the cart is referenced
 
 // Calculates total prices for the cart
-function recalculateCart() {
+function recalculateCart(tracer) {
+    if (tracer!==null) // If we were called by an element
+        dirty=true; // Set the cart as dirty
+
     var storage=sessionStorage;
     var table=document.getElementById("cart-table-body");
     var cart=JSON.parse(storage.getItem(cartKey));
@@ -19,6 +22,8 @@ function recalculateCart() {
             cents="0"+cents;
         row.getElementsByClassName("cart-item-cents")[1].innerHTML=cents;
     }
+
+    document.getElementById("order-cart").disabled=!dirty;
 }
 
 // Loads the shopping cart and fills in the appropriate items in the
@@ -64,6 +69,6 @@ function structureCart() {
         input.value=cart[i].count;
     }
 
-    recalculateCart();
+    recalculateCart(null);
 }
 document.addEventListener("DOMContentLoaded", structureCart);
