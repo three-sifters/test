@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: The Three Sifters
+title: Three Sifters
 email: hodin@charter.net
 description: > # this means to ignore newlines until "baseurl:"
   The three sifters was born out of love for beauty. The kind of beauty that can be 
