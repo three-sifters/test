@@ -1,7 +1,7 @@
 // Configuration file for the cookies gallery
 
 var gallery = {
-    "length" : 10,
+    "length" : 11,
     "images" : {
         1 : {
             "title"         : "Turkey Cookie",
@@ -95,5 +95,18 @@ var gallery = {
             "stepCount"     : 3,
             "inStock"       : true
         },
+		11 : {
+		    "title"         : "Love Initials",
+			"alt"           : "Love Initials",
+			"name"          : "Love Initials",
+			"description"   : "Wedding Initials on old wood",
+			"price"         : 5,
+			"defaultCount"  : 13,
+			"maxCount"      : 15,
+			"minCount"      : 3,
+			"stepCount"     : 3,
+			"inStock"       : true
+		},	
+			
     }
 }
